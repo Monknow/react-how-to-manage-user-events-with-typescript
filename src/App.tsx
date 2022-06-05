@@ -1,5 +1,6 @@
 import React from "react";
 import {ButtonHTMLAttributes} from "react";
+import "./App.css";
 
 interface MessageProps {
 	text: string;
@@ -8,7 +9,7 @@ interface MessageProps {
 
 function Message({onClick, text}: MessageProps): JSX.Element {
 	return (
-		<div>
+		<div className="message">
 			<button onClick={onClick}>{text}</button>
 		</div>
 	);
@@ -16,7 +17,7 @@ function Message({onClick, text}: MessageProps): JSX.Element {
 
 function Game() {
 	return (
-		<div>
+		<div className="game">
 			<Message
 				onClick={() => {
 					alert("I was clicked!");
